@@ -1,0 +1,302 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    max-width: 100vw;
+    height: auto;
+}
+.content{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+.contentB{
+    background-color: #202020;
+    width: 100%;
+    height: 200vh;
+    display: flex;
+}
+a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+.categories{
+    width: 14%;
+    height: auto;
+    background-color: rgb(15, 56, 36);
+}
+.tableCategories{
+    width: 100%;
+    height: 100%;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+th{
+    background-color: rgb(9, 39, 24);
+}
+td{
+    padding: 10px;
+    background-color: rgb(9, 39, 24);
+}
+.main{
+    width: 86%;
+    height: auto;
+}
+.mainC{
+    width: 100%;
+    height: auto;
+}
+.header{
+    width: 100%;
+    height: 5%;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.281);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header h1 {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+.beta{
+    margin-left: 5px;
+    background-color: rgb(15, 56, 36);
+    padding: 5px;
+    border-radius: 10px;
+}
+.article{
+    width: 100%;
+    height: 42%;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 50px;
+    font-size: 22px;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+.articleC{
+    width: 100%;
+    height: 95%;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 50px;
+    font-size: 22px;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+.commentBox{
+    width: 100%;
+    height: 45%;
+    display: flex;
+}
+
+.formComment{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    border: solid 0px;
+}
+#formulario {
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 5px solid rgb(15, 56, 36);
+    border-radius: 5px;
+    background-color: #353535;
+}
+
+/* Estilos para los campos de entrada y etiquetas */
+label {
+    display: block;
+    margin-bottom: 5px;
+    
+}
+
+input[type="email"],
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 0px;
+    border-radius: 5px;
+    box-sizing: border-box; /* Para incluir el padding y el borde en el ancho total */
+    background-color: #292929;
+    color: white;
+}
+
+textarea {
+    resize: none;
+    background-color: #292929;
+    color: white;
+    font-size: 20px;
+    font-family: 'calibri';
+}
+
+/* Estilos para el botón de enviar */
+button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #292929; /* Color de fondo del botón */
+    color: #ffffff; /* Color del texto del botón */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+    font-size: 20px;
+}
+
+button[type="submit"]:hover {
+    background-color: rgb(15, 56, 36); /* Cambia el color de fondo al pasar el ratón por encima */
+}
+#a1{
+    background-color: rgb(15, 56, 36);
+}
+.tituloCurso{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.cursos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+    width: 100%;
+    height: 55%;
+    justify-content: center;
+}
+
+.curso {
+    background-color: rgb(15, 56, 36);
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.allsCursos{
+    text-align: left;
+    font-size: 15px;
+    list-style-type: none;
+}
+.allsCursos ul li{
+    list-style-type: none;
+    padding: 5px;
+}
+.allsCursos h3{
+    margin-bottom: 10px;
+}
+#comentarios{
+    width: 90%;
+    height: 90%;
+    border-radius: 10px;
+    border: 5px solid rgb(15, 56, 36);
+    background-color: #353535;
+    padding: 20px;
+}
+.comment{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.comentario{
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #292929;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+.comentario p strong {
+    font-size: 16px;
+    margin-left: 10px;
+}
+.comentario p {
+    width: 90%;
+}
+/* Estilo para el botón de Editar */
+button.editar {
+    background-color: rgb(15, 56, 36); /* Color de fondo verde */
+    color: white; /* Color del texto blanco */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor de ratón como puntero */
+    margin-left: 10px; /* Margen derecho */
+}
+button.editar:hover {
+    background-color: rgb(27, 77, 53); /* Cambia el color de fondo cuando el cursor pasa sobre el botón */
+    color: white; /* Cambia el color del texto cuando el cursor pasa sobre el botón */
+}
+/* Estilo para el botón de Guardar */
+button.guardar {
+    background-color: #34383a; /* Color de fondo azul */
+    color: white; /* Color del texto blanco */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor de ratón como puntero */
+}
+button.guardar:hover {
+    background-color: rgb(15, 56, 36); /* Cambia el color de fondo cuando el cursor pasa sobre el botón */
+    color: white; /* Cambia el color del texto cuando el cursor pasa sobre el botón */
+}
+button.eliminar {
+    background-color: red; /* Cambia el color de fondo del botón */
+    color: white; /* Color del texto blanco */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor de ratón como puntero */
+    margin-left: 10px; /* Margen derecho */
+}
+
+button.eliminar:hover {
+    background-color: darkred; /* Cambia el color de fondo cuando el cursor está sobre el botón */
+}
+.footer {
+    background-color: rgb(15, 56, 36);
+    padding: 20px;
+    text-align: center;
+}
+
+.footer h2, .footer h3 {
+    color: #ffffff;
+    margin: 10px;
+}
+
+.footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+.footer ul.redes-sociales li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.footer ul.redes-sociales li a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.footer ul.redes-sociales li a:hover {
+    color: #007bff;
+}

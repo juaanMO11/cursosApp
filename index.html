@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos & Cursos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
+</head>
+<body>
+    <div class="content">
+        <div class="contentB">
+            <div class="categories">
+                <table class="tableCategories">
+                    <tr>
+                        <th><h2>CATEGORÍAS</h2></th>
+                    </tr>
+                    <tr>
+                        <td><a class="sinEstilos" href="/desarrolloPersonalYProfesional">Desarrollo Personal y Profesional</a></td>
+                    </tr>
+                    <tr>
+                        <td><a class="sinEstilos" href="/tecnologiaYPogramacion">Tecnología y Programación</a></td>
+                    </tr>
+                    <tr>
+                        <td><a class="sinEstilos" href="/negociosYEmprendimiento">Negocios y Emprendimiento</a></td>
+                    </tr>
+                    <tr>
+                        <td><a class="sinEstilos" href="/arteYDisenio">Arte y Diseño</a></td>
+                    </tr>
+                    <tr>
+                        <td><a class="sinEstilos" href="/idiomas">Idiomas</a></td>
+                    </tr>
+                    <tr>
+                        <td><a class="sinEstilos" href="/saludYBienestar">Salud y Bienestar</a></td>
+                    </tr>
+                    <tr>
+                        <td><a class="sinEstilos" href="/cienciaYMatematicas">Ciencia y Matemáticas</a></td>
+                    </tr>
+                    <tr>
+                        <td><a class="sinEstilos" href="/humanidadesYCienciasSociales">Humanidades y Ciencias Sociales</a></td>
+                    </tr>
+                    <tr>
+                        <td><a class="sinEstilos" href="/desarrolloWebYTecnologiasDigitales">Desarrollo Web y Tecnologías Digitales</a></td>
+                    </tr>
+                    <tr>
+                        <td><a class="sinEstilos" href="/educacionYEnsenianza">Educación y Enseñanza</a></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="main">
+                <div class="header">
+                    <h1>Cursos & Cursos</h1><h1 class="beta">BETA</h1>
+                </div>
+                <div class="article">
+                    <h1>¡Bienvenido a Cursos & Cursos!</h1> <br>
+                    <p>Descubre una nueva forma de aprender con nuestra amplia selección de cursos en línea. Ya sea que desees mejorar tus habilidades profesionales, explorar nuevos campos de interés o simplemente aprender por diversión, aquí encontrarás una variedad de cursos diseñados para satisfacer tus necesidades.</p><br>
+                    <p>Explora nuestro catálogo de cursos cuidadosamente seleccionados, que abarcan desde tecnología y negocios hasta arte y humanidades. Nuestros cursos son impartidos por expertos en sus campos, lo que garantiza que recibirás una educación de alta calidad y relevante para el mundo actual.</p><br>
+                    <p>Con nuestra plataforma fácil de usar, podrás acceder a los cursos en cualquier momento y desde cualquier lugar. Aprende a tu propio ritmo y adapta tu horario de estudio a tus compromisos personales y profesionales.</p><br>
+                    <p>Únete a nuestra comunidad de estudiantes motivados y empieza a adquirir nuevas habilidades hoy mismo. ¡El conocimiento está al alcance de tus manos en Cursos & Cursos!</p><br>
+                    <h1>Ayudanos a crecer</h1><br>
+                    <p>¡Queremos escucharte! En Cursos & Cursos, nos esforzamos por ofrecerte la mejor experiencia de aprendizaje posible. Tu opinión es invaluable para nosotros. Si tienes alguna sugerencia, comentario o idea para mejorar nuestra página de cursos, por favor compártela con nosotros. Nos comprometemos a revisar cada comentario y utilizar tus valiosas sugerencias para hacer que nuestra plataforma sea aún mejor. ¡Gracias por ayudarnos a crecer juntos! <br><br> Si crees que la página está perfecta también puedes dejar un comentario positivo</p>
+                </div>
+                <div class="commentBox">
+                    <div class="formComment">
+                        <form id="formulario" action="/insertar" method="POST">
+                            <div>
+                                <label for="name">Nombre:</label>
+                                <input type="text" id="name" name="name"><br><br>
+                            </div>
+                            <div>
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email"><br><br>
+                            </div>
+                            <div>
+                                <label for="comentario">Comentario:</label><br>
+                                <textarea id="comentario" name="comentario" rows="10"></textarea><br><br>
+                            </div>
+                            <div>
+                                <button type="submit">Enviar comentario</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="comment">
+                        <div id="comentarios">
+                        <!--Aquí se agregan los div de nombre y comentario de la base de datos-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <h2>¡Síguenos!</h2>
+            <ul class="redes-sociales">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+            </ul>
+            <h3>Contacto</h3>
+            <ul class="informacion-contacto">
+                <li>Teléfono: 123-456-789</li>
+                <li>Email: info@example.com</li>
+                <li>Dirección: Calle Ficticia, 123</li>
+            </ul>
+            <h3>Otros Enlaces</h3>
+            <ul class="otros-enlaces">
+                <li><a href="#">Acerca de nosotros</a></li>
+                <li><a href="#">Términos y condiciones</a></li>
+                <li><a href="#">Política de privacidad</a></li>
+            </ul>
+        </div>
+</body>
+    <script>
+
+//Función para guardar los datos del formulario en base de datos desde el frontend//
+const formulario = document.getElementById('formulario');
+formulario.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const formData = new FormData(formulario);
+    const nombre = formData.get('name');
+    const email = formData.get('email');
+    const comentario = formData.get('comentario');
+    try {
+        const response = await fetch('/insertar', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: `nombre=${nombre}&email=${email}&comentario=${comentario}`,
+        });
+        if (response.ok) {
+            actualizarComentarios();
+        } else {
+            console.error('Error al insertar datos');
+        }
+    } catch (error) {
+        console.error('Error de red', error);
+    }
+});
+// Función para obtener los comentarios del servidor y mostrarlos//
+async function actualizarComentarios() {
+    try {
+        const response = await fetch('/comentarios');
+        const comentarios = await response.json();
+        mostrarComentarios(comentarios);
+    } catch (error) {
+        console.error('Error al obtener comentarios:', error);
+    }
+}
+//-----------------------------------------//
+
+//Función para obtener los datos del formulario de backend a frontend//
+window.addEventListener('load', async () => {
+    try {
+        const response = await fetch('/comentarios');
+        const comentarios = await response.json();
+        mostrarComentarios(comentarios);
+    } catch (error) {
+        console.error('Error al obtener comentarios:', error);
+    }
+});
+function mostrarComentarios(comentarios) {
+    const comentariosDiv = document.getElementById('comentarios');
+    comentariosDiv.innerHTML = '';
+    comentarios.forEach(comentario => {
+        const comentarioElement = document.createElement('div'); // Aquí se declara la variable comentarioElement
+        comentarioElement.classList.add('comentario');
+        comentarioElement.id = `comentario-${comentario.id}`;
+        comentarioElement.innerHTML = `
+            <p><strong>${comentario.name}</strong>: ${comentario.comentario}</p>
+            <button class="editar" onclick="editarComentario(${comentario.id})">Editar</button>
+            <button class="eliminar" onclick="eliminarComentario(${comentario.id})">Eliminar</button>
+        `;
+        comentariosDiv.appendChild(comentarioElement);
+    });
+}
+//-----------------------------------------//
+
+//Función para editar un comentario//
+function editarComentario(id) {
+    const comentarioElement = document.getElementById(`comentario-${id}`);
+    if (comentarioElement) {
+        const comentarioTexto = comentarioElement.querySelector('p').innerText;
+        console.log(comentarioTexto);
+        // Lógica para editar el comentario...
+    } else {
+        console.error('El elemento del comentario no fue encontrado');
+    }
+}
+
+
+function editarComentario(comentarioId) {
+    const comentarioElement = document.getElementById(`comentario-${comentarioId}`);
+    if (comentarioElement) {
+        const comentarioTexto = comentarioElement.querySelector('p').innerText.split(': ')[1]; // Obtenemos solo el texto del comentario
+        comentarioElement.innerHTML = `
+            <p><input type="text" id="nuevo-comentario-${comentarioId}" value="${comentarioTexto}"></p>
+            <button class="guardar" onclick="guardarEdicion(${comentarioId})">Guardar</button>
+        `;
+    } else {
+        console.error('El elemento del comentario no fue encontrado');
+    }
+}
+async function guardarEdicion(comentarioId) {
+    const nuevoComentario = document.getElementById(`nuevo-comentario-${comentarioId}`).value;
+    try {
+        const response = await fetch(`/comentarios/${comentarioId}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ comentario: nuevoComentario }), // Solo enviamos el nuevo comentario
+        });
+        if (response.ok) {
+            // Actualiza la lista de comentarios después de guardar la edición
+            actualizarComentarios();
+        } else {
+            console.error('Error al editar el comentario');
+        }
+    } catch (error) {
+        console.error('Error de red', error);
+    }
+}
+//-----------------------------------------//
+//Función para eliminar un comentario
+// Función para eliminar un comentario
+async function eliminarComentario(comentarioId) {
+    try {
+        const response = await fetch(`/comentarios/${comentarioId}`, {
+            method: 'DELETE'
+        });
+        if (response.ok) {
+            // Actualiza la lista de comentarios después de eliminar uno
+            actualizarComentarios();
+        } else {
+            console.error('Error al eliminar el comentario');
+        }
+    } catch (error) {
+        console.error('Error de red', error);
+    }
+}
+comentarioElement.innerHTML = `
+    <p><strong>${comentario.name}</strong>: ${comentario.comentario}</p>
+    <button class="editar" onclick="editarComentario(${comentario.id})">Editar</button>
+    <button class="eliminar" onclick="eliminarComentario(${comentario.id})">Eliminar</button>
+`;
+//-----------------------------------------//
+
+    </script>
+</body>
+</html>
